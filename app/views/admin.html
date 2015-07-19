@@ -1,0 +1,45 @@
+<md-button class="md-raised md-primary" ng-click="saveFields()">Save Field Labels</md-button>
+<div layout="row">
+    <div flex="50" layout="column">
+        <md-input-container flex>
+            <label>Field 1</label>
+            <input type="text" ng-model="user.fields.field_1">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Field 2</label>
+            <input type="text" ng-model="user.fields.field_2">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Field 3</label>
+            <input type="text" ng-model="user.fields.field_3">
+        </md-input-container>
+    </div>
+    <div flex="50" layout="column">
+        <md-input-container flex>
+            <label>Field 4</label>
+            <input type="text" ng-model="user.fields.field_4">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Field 5</label>
+            <input type="text" ng-model="user.fields.field_5">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Field 6</label>
+            <input type="text" ng-model="user.fields.field_6">
+        </md-input-container>
+    </div>
+</div>
+<div layout="column">
+    <p>First row should be headers and is not imported. Import information to display for each student:</p>
+    <p class="text-muted">Net ID, Family Name, Given Name, Field 1, Field 2, Field 3, Field 4, Field 5, Field 6</p>
+    <div>
+        <input type="file" file-change="csvSelected($event, files)"/>
+    </div>
+    <div class="alert alert-success" role="alert" ng-show="admin.import_res">
+        <h4>Import Results</h4>
+        <p>{{admin.import_res}}</p>
+    </div>
+    <div style="margin-top:10px;">
+        <div ui-grid="adminGridOptions" class="tallGrid"></div>
+    </div>
+</div>

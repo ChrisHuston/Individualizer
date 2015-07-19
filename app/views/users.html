@@ -1,0 +1,15 @@
+<div class="row" id="content-grids">
+    <div class="row fhp-import">
+        <div class="form-group">
+            <label for="oo_file" class="col-sm-9 col-md-9 control-label">Import Student Credentials
+                <p class="text-muted">Net ID, User ID, Password</p>
+            </label>
+            <div class="col-sm-3 col-md-3">
+                <input type="file" id="oo_file" class="form-control" file-change="csvSelected($event, files)"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-sm-12">
+        <div class="gridStyle" ng-if="showGrid" ng-grid="courseStudentsGridOptions"></div>
+    </div>
+</div>
